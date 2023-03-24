@@ -3,7 +3,44 @@
 /*
 色指定
 */
+:root {
+    /* bg */
+    --bg-base: #FAFAFA;
+    --bg-primary: #C7A26C;
+    --bg-primary-light: rgba(199, 162, 108, 0.35);
+    --bg-primary-extra-light: rgba(199, 162, 108, 0.05);
 
+    --bg-secondary: #52442F;
+    --bg-black: #333333;
+    --bg-white: #FFFFFF;
+    --bg-accent: #FF9800;
+
+    /* border */
+    --border-gray: #DDDDDD;
+    --border-primary: #C7A26C;
+    --border-black: #333333;
+
+    /* font */
+    --font-primary: #C7A26C;
+    --font-black: #333333;
+    --font-white: #FFFFFF;
+    --font-link: #4895E6;
+    --font-base: #8D857E;
+}
+
+:root {
+    --width-content-s: 760px;
+    --width-content: 1000px;
+}
+
+:root {
+    --font-family-base: "Noto Sans JP", sans-serif;
+}
+
+:root {
+    --z-index-header: 10;
+
+}
 
 /*
 リセットCSS
@@ -109,7 +146,7 @@ input,
 textarea,
 select,
 button {
-    /* color: inherit;
+    color: inherit;
     font-family: inherit;
     font-size: inherit;
     font-weight: inherit;
@@ -119,7 +156,7 @@ button {
     border: none;
     appearance: none;
     -webkit-appearance: none;
-    background-color: inherit; */
+    background-color: inherit;
 }
 
 input,
@@ -170,4 +207,77 @@ svg {
 *::before,
 *::after {
     box-sizing: border-box;
+}
+
+/* サイト全体の設定 */
+body {
+    font-family: var(--font-family-base);
+    line-height: 1.8;
+    color: var(--font-base);
+}
+
+/* コンポーネント */
+.h-button {
+    display: block;
+    /* width: 120px; */
+    padding: 5px;
+    align-items: center;
+    border: 1px solid var(--border-primary);
+    border-radius: 50px;
+}
+
+/* レイアウト */
+.l-container {
+    padding: 0 18px;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 500px) {
+    .l-container-s {
+        padding: 0;
+        width: var(--width-content-s);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .l-container {
+        padding: 0;
+        width: var(--width-content);
+    }
+}
+
+/* 各セクション上の余白設定 */
+.l-section {
+    padding: 64px 0;
+}
+
+@media screen and (min-width: 764px) {
+    .l-section {
+        padding: 96px 0;
+    }
+}
+
+/* 各セクション下の余白設定 */
+.c-inner {
+    margin-bottom: 32px;
+}
+
+@media screen and (min-width: 764px) {
+    .c-inner {
+        margin-bottom: 40px;
+    }
+}
+
+/* ヘッダー */
+.header {
+    padding: 
+}
+
+.header-inner  {
+    display: flex;
+    align-items: center;
+}
+
+.h-logo {
+    width: 100px;
 }
