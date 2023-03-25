@@ -146,7 +146,7 @@ input,
 textarea,
 select,
 button {
-    color: inherit;
+    /* color: inherit;
     font-family: inherit;
     font-size: inherit;
     font-weight: inherit;
@@ -156,7 +156,7 @@ button {
     border: none;
     appearance: none;
     -webkit-appearance: none;
-    background-color: inherit;
+    background-color: inherit; */
 }
 
 input,
@@ -270,14 +270,51 @@ body {
 
 /* ヘッダー */
 .header {
-    padding: 
+    padding: 20px 10px;
 }
 
 .header-inner  {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .h-logo {
-    width: 100px;
+    width: 40%;
+}
+
+
+@media screen and (min-width: 764px) {
+    .h-logo {
+        width: 100px;
+    }
+}
+
+.h-btn-wrapper {
+    display: flex;
+}
+
+@media screen and (min-width: 764px) {
+    .h-btn-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+}
+
+.h-button--bg-orange {
+    color: var(--font-black);
+    border: 1px solid var(--border-black);
+    background-color: var(--bg-accent);
+}
+
+/* ページ上部 */
+.pg-top {
+    background-color: var(--bg-primary-light);
+    background-image: url(../img/bg-pattern-kv@2x.png);
+    height: 400px;
+}
+
+@media screen and (min-width: 764px) {
+
 }
