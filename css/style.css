@@ -268,7 +268,26 @@ body {
     }
 }
 
-/* ヘッダー */
+/* セクションタイトル */
+.sec-title {
+    font-size: 22px;
+    margin-top: 64px;
+    margin-bottom: 32px;
+    color: var(--font-primary);
+}
+
+@media screen and (min-width: 764px) {
+    .sec-title {
+        font-size: 32px;
+        color: var(--font-primary);
+        text-align: center;
+        margin: 96px 0;
+    }
+}
+    
+/*-------------------------
+ヘッダー 
+------------------------*/
 .header {
     padding: 20px 10px;
 }
@@ -316,5 +335,73 @@ body {
 }
 
 @media screen and (min-width: 764px) {
+    .pg-top-inner {
+        display: flex;
+    }
+}
 
+/* 動画でわかるCWstudio */
+.movie {
+    display: flex;
+    justify-content: center;
+}
+
+/* 9つの機能・特徴 */
+
+.f-fullwidth {
+    background-color: var(--bg-primary-extra-light);
+    margin: 5px calc(50% - 50vw) 15px;
+    width: 100vw;
+}
+
+.c-inner {
+    width: 90%;
+    max-width: var(--width-content);
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 764px) {
+    .f-flex {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 40px 0;
+        color: var(--font-primary);
+    }
+
+    .function-img {
+        width: 60%;
+        margin-left: 25px;
+    }
+
+    .adjust-img {
+        margin-left: 130px;
+    }
+
+    .point {
+        font-size: 12px;
+    }
+
+    .f-title {
+        font-size: 26px;
+    }
+
+    .f-about {
+        color: var(--font-black);
+    }
+
+    .about {
+        display: flex;
+        align-items: center;
+    }
+
+    .f-icon {
+        width: 50%;
+        margin-right: 10px;
+    }
+}
+
+/* 無料トライアル */
+.freetrial {
+    
 }
