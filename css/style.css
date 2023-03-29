@@ -224,6 +224,7 @@ body {
     align-items: center;
     border: 1px solid var(--border-primary);
     border-radius: 50px;
+    margin: 0 auto;
 }
 
 /* レイアウト */
@@ -347,7 +348,6 @@ body {
 }
 
 /* 9つの機能・特徴 */
-
 .f-fullwidth {
     background-color: var(--bg-primary-extra-light);
     margin: 5px calc(50% - 50vw) 15px;
@@ -372,6 +372,7 @@ body {
     .function-img {
         width: 60%;
         margin-left: 25px;
+        filter:drop-shadow(3px 3px 3px rgb(0,0,0, 0.3));
     }
 
     .adjust-img {
@@ -403,5 +404,105 @@ body {
 
 /* 無料トライアル */
 .freetrial {
+    background-color: var(--bg-secondary);
+    padding: 30px 30px;
+    margin: 5px calc(50% - 50vw) 15px;
+    width: 100vw;
+    text-align: center;
+    color: var(--font-white);
+}
+
+@media screen and (min-width: 764px) {    
+    .fr-title {
+        font-size: 32px;
+    }
+    
+    .fr-text {
+        margin: 10px 0;
+    }
+
+    .h-button--adjust {
+        font-size: 18px;
+    }
+}
+
+/*======================
+料金プラン 
+======================*/
+
+/* 無料プラン */
+.p-flex {
+    border: 3px solid var(--border-gray);
+    border-radius: 20px;
+    text-align: center;
+    padding: 50px;
+}
+
+.p-title {
+    border: 2px solid var(--border-gray);
+    border-radius: 50px;
+    padding: 5px;
+}
+
+.monthly-fee {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.price {
+    font-size: 36px;
+}
+
+.about {
+    position: relative;
+}
+
+.about::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: .5em;
+    left: -1.5em;
+    width: 10px;
+    height: 5px;
+    border-left: 2px solid var(--border-gray);
+    border-bottom: 2px solid var(--border-gray);
+    transform: rotate(-45deg);
+}
+
+/* 有料プラン(金色) */
+.p-flex--gold {
+    border: 3px solid var(--border-primary);
+    color: var(--font-primary);
+    background-color: var(--bg-primary-extra-light);
+}
+
+.p-title--gold {
+    border: 1px solid var(--border-primary);
+    background-color: var(--bg-white);
+}
+
+.about::after {
+    border-left: 2px solid var(--border-primary);
+    border-bottom: 2px solid var(--border-primary);
+}
+
+@media screen and (min-width: 764px) {
+    .p-flex-wrapper {
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-evenly;
+    }
+}
+
+/* Q&A */
+.question-item::before {
+    content: "Q";
+    background-color: var(--bg-primary);
+}
+
+.question-item::after {
+    content: "A";
     
 }
