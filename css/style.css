@@ -360,6 +360,20 @@ body {
     margin: 0 auto;
 }
 
+.about {
+    display: flex;
+    flex-direction: column;
+}
+
+.f-icon {
+    width: 100%;
+    height: 50px
+}
+
+.f-icon-text {
+    width: 100%;
+}
+
 @media screen and (min-width: 764px) {
     .f-flex {
         display: flex;
@@ -397,8 +411,13 @@ body {
     }
 
     .f-icon {
-        width: 50%;
+        width: 100%;
+        height: 44px;
         margin-right: 10px;
+    }
+
+    .f-icon-text {
+        width: 100%;
     }
 }
 
@@ -410,6 +429,10 @@ body {
     width: 100vw;
     text-align: center;
     color: var(--font-white);
+}
+
+.freetrial--adjust {
+    padding: 0;
 }
 
 @media screen and (min-width: 764px) {    
@@ -497,12 +520,35 @@ body {
 }
 
 /* Q&A */
-.question-item::before {
+.circle::before {
     content: "Q";
     background-color: var(--bg-primary);
 }
 
-.question-item::after {
-    content: "A";
+.circle--a::before {
+content: "A";
+}
+
+/* ページ下部 */
+@media screen and (min-width: 764px) {
+    .pd-img {
+        width: 340px;
+        margin: 0 auto;
+        display: block;
+    }
     
+    .pd-links {
+    display: flex;
+    justify-content: center;
+}
+
+.pd-link {
+    margin: 5px 2px;
+}
+}
+
+/* copyright */
+.copyright {
+    text-align: center;
+    font-size: 12px;
 }
