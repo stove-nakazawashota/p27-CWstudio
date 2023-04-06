@@ -146,7 +146,7 @@ input,
 textarea,
 select,
 button {
-    /* color: inherit;
+    color: inherit;
     font-family: inherit;
     font-size: inherit;
     font-weight: inherit;
@@ -156,7 +156,7 @@ button {
     border: none;
     appearance: none;
     -webkit-appearance: none;
-    background-color: inherit; */
+    background-color: inherit;
 }
 
 input,
@@ -469,6 +469,7 @@ body {
         width: 60%;
         margin-left: 25px;
         filter:drop-shadow(3px 3px 3px rgb(0,0,0, 0.3));
+        margin-bottom: 30px;
     }
 
     .adjust-img {
@@ -610,13 +611,27 @@ body {
 }
 
 /* Q&A */
+.question-item {
+    margin: 40px 0;
+}
+
 .circle::before {
     content: "Q";
     background-color: var(--bg-primary);
+    padding: 4px 10px;
+    border-radius: 18px;;
+    color: var(--font-white);
 }
 
 .circle--a::before {
-content: "A";
+    content: "A";
+    color: var(--font-primary);
+    border: 1px solid var(--border-primary);
+    background-color: var(--bg-white);
+}
+
+.answer {
+    margin-top: 10px;
 }
 
 /* ページ下部 */
