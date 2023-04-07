@@ -331,9 +331,11 @@ body {
 
 .h-button--bg-orange {
     background-color: var(--bg-accent);
+    color: var(--font-black);
     font-size: 18px;
     padding: 15px;
     font-weight: bold;
+    border: 2px solid var(--border-black);
 }
 
 .h-button--l {
@@ -659,4 +661,12 @@ body {
 .copyright {
     text-align: center;
     font-size: 12px;
+}
+
+@media screen and (max-width: 764px) {
+    .about-f {
+        display: flex;
+        flex-direction: column;
+        width: 35%;
+    }
 }
