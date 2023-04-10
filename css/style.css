@@ -288,7 +288,7 @@ body {
         font-size: 32px;
         color: var(--font-primary);
         text-align: center;
-        margin: 96px 0;
+        margin: 16px 0;
     }
 }
     
@@ -341,12 +341,18 @@ body {
     font-size: 18px;
     padding: 15px;
     font-weight: bold;
-    border: 2px solid var(--border-black);
+    border: 3px solid var(--border-black);
 }
 
 .h-button--l {
     padding: 10px;
     font-weight: bold;
+}
+
+@media screen and (min-width: 674px) {
+    .sp-br {
+        display: none;
+    }
 }
 
 /* ページ上部 */
@@ -371,10 +377,15 @@ body {
     font-size: 30px;
     color: var(--font-black);
     font-weight: bold;
+    text-align: center;
 }
 
 .pg-top-tag-wraper {
-    margin: 0 auto;
+    padding: 0 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: center;
 }
 
 .pg-top-tag {
@@ -393,8 +404,13 @@ body {
     background: var(--bg-white);
     padding: 30px;
     border-radius: 15px;
-    width: 90%;
     margin: 0 auto;
+}
+
+@media screen and (max-width: 764px) {
+    .r-inner {
+        width: 90%;
+    }
 }
 
 .r-message {
@@ -456,6 +472,7 @@ body {
     .pg-top-catch {
         font-size: 18px;
         color: var(--font-black);
+        text-align: left;
     }
 
     .pg-top-title {
@@ -463,10 +480,12 @@ body {
         font-weight: bold;
         color: var(--font-black);
         text-align: center;
+        text-align: left;
     }
 
     .pg-top-tag-wraper {
         width: 48%;
+        text-align: left;
     }
 
     .r-inner {
@@ -534,13 +553,14 @@ body {
 
 /* 動画でわかるCWstudio */
 .movie iframe {
-    width: 90%;
+    width: 75%;
+    margin: 0 auto;
+    display: block;
 }
 
-@media screen and (min-width: 764px) {
-    .movie {
-        display: flex;
-        justify-content: center;
+@media screen and (max-width: 764px) {
+    .movie iframe {
+        width: 90%;
     }
 }
     
@@ -557,7 +577,50 @@ body {
     margin: 0 auto;
 }
 
+.point {
+    font-size: 14px;
+    color: var(--font-primary);
+}
+
+.f-title {
+    font-size: 20px;
+    color: var(--font-primary);
+}
+
+.f-flex {
+    display: flex;
+    flex-direction: column-reverse;
+    border-bottom: 1px solid var(--border-gray);
+    margin: 10px 0;
+}
+
+.f-flex--sp {
+    display: flex;
+    flex-direction: row;
+}
+
+.f-icon {
+    width: 15%;
+    margin-right: 5px;
+
+}
+
+.f-icon-text {
+    width: 100%;
+}
+
+.border {
+    border: none;
+}
+
+.function-img {
+    padding-bottom: 5px;
+}
+
 @media screen and (min-width: 764px) {
+    .cwstudio-movie {
+        margin-bottom: 50px;
+    }
     .f-flex {
         display: flex;
         flex-direction: row;
@@ -574,6 +637,14 @@ body {
 
     .adjust-img {
         margin-left: 130px;
+    }
+
+    .border {
+        border-bottom: 1px solid var(--border-gray);
+    }
+
+    .border {
+        border: none;
     }
 
     .point {
@@ -594,13 +665,13 @@ body {
     }
 
     .f-icon {
-        width: 100%;
+        width: 25%;
         height: 44px;
         margin-right: 5px;
     }
 
     .f-icon-text {
-        width: 100%;
+        width: 80%;
         text-align: left;
     }
 }
@@ -616,7 +687,12 @@ body {
 }
 
 .freetrial--adjust {
-    padding: 0;
+    padding: 10px;
+}
+
+.fr-title {
+    font-size: 24px;
+    margin-bottom: 5px;
 }
 
 @media screen and (min-width: 764px) {    
@@ -734,10 +810,26 @@ body {
     margin-top: 10px;
 }
 
+
+
 /* ページ下部 */
+.pd-link {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.pd-img {
+    width: 150px;
+    margin: 0 auto;
+    display: block;
+}
+
 @media screen and (min-width: 764px) {
     .pd {
-        margin: 15px 0;
+        margin: 14px 0;
     }
     .pd-img {
         width: 200px;
@@ -753,6 +845,10 @@ body {
     .pd-link {
         margin: 5px 2px;
     }
+
+    .pd-link::after {
+        content: "/";
+    }
 }
 
 /* copyright */
@@ -761,10 +857,3 @@ body {
     font-size: 12px;
 }
 
-@media screen and (max-width: 764px) {
-    .about-f {
-        display: flex;
-        flex-direction: column;
-        width: 35%;
-    }
-}
