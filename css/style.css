@@ -146,7 +146,7 @@ input,
 textarea,
 select,
 button {
-    color: inherit;
+    /* color: inherit;
     font-family: inherit;
     font-size: inherit;
     font-weight: inherit;
@@ -156,7 +156,7 @@ button {
     border: none;
     appearance: none;
     -webkit-appearance: none;
-    background-color: inherit;
+    background-color: inherit; */
 }
 
 input,
@@ -216,6 +216,11 @@ body {
     color: var(--font-base);
 }
 
+/* リンクの色 */
+.link-color {
+    color: var(--font-link);
+}
+
 /* コンポーネント */
 .h-button {
     display: block;
@@ -249,7 +254,7 @@ body {
 
 /* 各セクション上の余白設定 */
 .l-section {
-    padding: 64px 0;
+    /* padding: 64px 0; */
 }
 
 @media screen and (min-width: 764px) {
@@ -275,6 +280,7 @@ body {
     margin-top: 64px;
     margin-bottom: 32px;
     color: var(--font-primary);
+    text-align: center;
 }
 
 @media screen and (min-width: 764px) {
@@ -347,105 +353,197 @@ body {
 .pg-top {
     background-color: var(--bg-primary-light);
     background-image: url(../img/bg-pattern-kv@2x.png);
-    height: 400px;
+    height: 600px;
 }
 
-.pg-top {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: center;
-}
 .pg-top-inner {
-    width: 90%;
-    max-width: var(--width-content);
-}
-.pd-top-catch {
-    font-size: 18px;
-    color: var(--font-black);
+    margin-top: 15px;
 }
 
-.pd-top-title {
-    font-size: 32px;
+.pg-top-catch {
+    text-align: center;
+    font-size: 20px;
+    color: var(--font-primary);
+    padding-top: 15px;
+}
+
+.pg-top-title {
+    font-size: 30px;
+    color: var(--font-black);
     font-weight: bold;
-    color: var(--font-black);
 }
 
-.pd-top-tag-wraper {
-    width: 48%;
+.pg-top-tag-wraper {
+    margin: 0 auto;
+}
+
+.pg-top-tag {
+    background-color: var(--bg-primary);
+    color: var(--font-white);
+    font-size: 14px;
+    padding: 1px;
+    border-radius: 3px;
+}
+
+.register {
+    margin-top: 15px;
 }
 
 .r-inner {
     background: var(--bg-white);
     padding: 30px;
-    border-radius: 20px;
-}
-
-.pg-top-tag {
-    background-color: var(--bg-primary);
-    padding: 2px;
-    font-size: 14px;
-    border-radius: 5px;
-    color: var(--font-white);
-}
-
-.link-color {
-    color: var(--font-link);
+    border-radius: 15px;
+    width: 90%;
+    margin: 0 auto;
 }
 
 .r-message {
     text-align: center;
+    color: var(--font-primary);
     font-size: 20px;
     font-weight: bold;
-    color: var(--font-primary);
 }
 
-.mail {
+.form {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+}
+
+.form-item {
     color: var(--font-black);
-    font-size: 18px;
-    margin: 10px 0;
+    font-weight: bold;
 }
 
 .form-input {
     padding: 5px;
+    width: 100%;
     border: 1px solid var(--border-gray);
     border-radius: 5px;
 }
 
 .password {
-    display: flex;
-    flex-direction: column;
-    color: var(--font-black);
-    font-size: 18px;
+    margin-top: 10px;
 }
 
 .check {
     display: flex;
-    padding-right: 5px;
-    text-align: center;
-    margin: 10px 0;
 }
 
 .checkbox {
-    margin-right: 5px;
+    margin-right: 3px;
 }
 
 .r-button {
-    background: var(--bg-black);
-    color: var(--font-white);
+    margin-top: 5px;
     padding: 10px;
-    width: 300px;
-    border-radius: 100px;
+    color: var(--font-white);
+    background: var(--bg-black);
+    border-radius: 20px;
+}
+
+@media screen and (min-width: 764px) {
+    .pg-top {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .pg-top-inner {
+        width: 90%;
+        max-width: var(--width-content);
+    }
+    .pg-top-catch {
+        font-size: 18px;
+        color: var(--font-black);
+    }
+
+    .pg-top-title {
+        font-size: 32px;
+        font-weight: bold;
+        color: var(--font-black);
+        text-align: center;
+    }
+
+    .pg-top-tag-wraper {
+        width: 48%;
+    }
+
+    .r-inner {
+        background: var(--bg-white);
+        padding: 30px;
+        border-radius: 20px;
+    }
+
+    .pg-top-tag {
+        background-color: var(--bg-primary);
+        padding: 2px;
+        font-size: 14px;
+        border-radius: 5px;
+        color: var(--font-white);
+    }
+
+    .r-message {
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+        color: var(--font-primary);
+    }
+
+    .mail {
+        display: flex;
+        flex-direction: column;
+        color: var(--font-black);
+        font-size: 18px;
+        margin: 10px 0;
+    }
+
+    .form-input {
+        padding: 5px;
+        border: 1px solid var(--border-gray);
+        border-radius: 5px;
+    }
+
+    .password {
+        display: flex;
+        flex-direction: column;
+        color: var(--font-black);
+        font-size: 18px;
+    }
+
+    .check {
+        display: flex;
+        padding-right: 5px;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .checkbox {
+        margin-right: 5px;
+    }
+
+    .r-button {
+        background: var(--bg-black);
+        color: var(--font-white);
+        padding: 10px;
+        width: 300px;
+        border-radius: 100px;
+        margin: 0 auto;
+    }
 }
 
 /* 動画でわかるCWstudio */
-.movie {
-    display: flex;
-    justify-content: center;
+.movie iframe {
+    width: 90%;
 }
 
+@media screen and (min-width: 764px) {
+    .movie {
+        display: flex;
+        justify-content: center;
+    }
+}
+    
 /* 9つの機能・特徴 */
 .f-fullwidth {
     background-color: var(--bg-primary-extra-light);
